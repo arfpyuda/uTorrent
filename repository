@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------------------------------------------------=
+Jika menggunakan ubuntu 19.0 atau 20.4 maka sebaiknya melakukan penginstalan ini, karena repository libssl1.0.0       =
+tidak ada di dalam package versi tersebut, saya sendiri sudah melaukan penginstalan menggunakan kedua metode tersebut =
+namun hanya bisa di lakukan jika saya melakukan penginstallan repository ini.                                         =
+----------------------------------------------------------------------------------------------------------------------=
+
+
+I am using Ubuntu 20.04, below steps work for me: ---------------------------------------------------------------------
+Add 18.04's main repository using
+
+      echo "deb http://security.ubuntu.com/ubuntu bionic-security main" | sudo tee -a /etc/apt/sources.list.d/bionic.list
+
+
+Update repository cache and check---------------------------------------------------------------------------------------
+if libssl1.0-dev is now available.
+
+      sudo apt update
+      apt-cache policy libssl1.0-dev
+      
+      
+Install libssl1.0-dev------------------------------------------------------------------------------------------------------
+
+      sudo apt-get install libssl1.0-dev
+      
+      
+ Referensi-------------------------------------------------------------------------------------------------------------------
+ 
+      https://askubuntu.com/questions/462094/unable-to-install-libssl1-0-0i386-due-to-unmet-dependencies.
