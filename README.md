@@ -4,6 +4,7 @@ uTorrent ini di instal pada ubuntu 20.4
 ## Instal Dependency
 
     sudo apt update
+    
     sudo apt -y install libssl1.0.0 libssl-dev
 
 ## Install & Buka
@@ -66,8 +67,11 @@ uTorrent ini di instal pada ubuntu 20.4
 ## Buat folder di shell
     
     mkdir -p /home/share/bittorent/_torrents
+    
     mkdir -p /home/share/bittorent/_actives
+    
     chmod -Rf 777 /home/share
+    
     chown -Rf nobody: /home/share
     
    
